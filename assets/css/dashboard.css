@@ -1,0 +1,7 @@
+.dashboard-body-area .container{
+    background-color: white;
+    margin: 30px 180px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px rgb(197, 197, 197) solid;
+}

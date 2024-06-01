@@ -3,9 +3,9 @@
 
     session_start();
     
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true){              
-        header("location: login.php");
-    }
+    // if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true){              
+    //     header("location: login.php");
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <script src="https://kit.fontawesome.com/118a820504.js" crossorigin="anonymous"></script>
     <script src="library/chart.min.js"></script>
@@ -24,7 +25,14 @@
     <div class="dashboard-container">
         <?php include "templates/nav-temp.php"; ?>
         <div class="dashboard-body-area">
-            <span>This is the dashboard section</span>
+            <div class="container">
+                <div class="job-header">
+                    <h2>Job Section</h2>
+                    <div class="job-button">
+                        <button><a href="">Post Job</a></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>  
 </body>

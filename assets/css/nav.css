@@ -1,0 +1,77 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope";
+    background-color: #fafbff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    background: #007bff;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.user_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 30px;
+}
+
+.fa-regular {
+    font-size: 18px;
+    padding: 3px;
+}
+
+.logout {
+    padding-left: 10px;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.list ul li:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
