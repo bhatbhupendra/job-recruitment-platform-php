@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav dashboard-body-area">
             <div class="logo">
                 <h3>Job Recruiment Platform</h3>
             </div>

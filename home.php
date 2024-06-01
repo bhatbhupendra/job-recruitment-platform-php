@@ -28,8 +28,27 @@
             <div class="container">
                 <div class="job-header">
                     <h2>Job Section</h2>
-                    <div class="job-button">
-                        <button><a href="">Post Job</a></button>
+                    <div class="job-buttons">
+                        <div class="job-post-button">
+                            <button class="job-button"><a href="">Post new Job</a></button>
+                        </div>
+                        <div class="job-applied">
+                            <button class="job-button"><a href="">My Post Job</a></button>
+                        </div>
+                        <div class="i-applied">
+                            <button class="job-button"><a href="">Applied Job</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-list">
+                    <div class="job-card">
+                        <h3>We are hairgin</h3>
+                        <h4>Location : Sydney</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda maiores explicabo consectetur dolorem officia suscipit soluta cupidit.
+                        </p>
+                        <h5>2024/2/6</h5>
+                        <h5>Posted by: some some</h5>
+                        <button class="job-apply-button">Apply</button>
                     </div>
                 </div>
             </div>

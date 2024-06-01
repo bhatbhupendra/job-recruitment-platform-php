@@ -22,7 +22,7 @@
     border: 2px solid #b1c7e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 50px;
+    padding: 15px 30px;
   }
   
   .signup_form h1{
@@ -42,7 +42,7 @@
   
   .field input{
       font-size: 20px;
-      padding: 10px;
+      padding: 5px;
   }
   
   
@@ -59,20 +59,17 @@
   .password_eye i {
     position: absolute;
     right: 20px;
-    top: 15px;
+    top: 12px;
   }
   
   .button_submit input{
-    margin-top: 10px;
-    margin-bottom: 5px;
-    height: 50px;
-    width: 100px;
+    padding: 8px 55px;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     background: #007bff;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 6px; 
     cursor: pointer;
   }
   
