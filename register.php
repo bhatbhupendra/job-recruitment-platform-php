@@ -101,7 +101,7 @@
             <input type="submit" value="Register">
           </div>
         </form>
-        <div class="link">Already signed up? <a href="login.php">Login now</a></div>
+        <div class="link">Already signed up? <a href="\job-recruitment-platform-php\login.php">Login now</a></div>
         <?php 
             if(isset($_POST["error"])){ 
               $errorData = $_POST['error'];
