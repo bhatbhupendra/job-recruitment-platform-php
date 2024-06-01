@@ -47,12 +47,13 @@
   <head>
     <meta charset="utf-8">
     <title>LogIn</title>
+    <link rel="stylesheet" href="assets/css/login.css">
     <script src="https://kit.fontawesome.com/e5f4960269.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="form_wrapper">
-      <section id="signup_form">
-        <header>LogIn Form</header>
+      <section class="signup_form">
+        <h1>LogIn Form</h1>
         <form action="<?php $_PHP_SELF?>" method="post">
           <div class="field email">
             <label for="email">Email Address</label>
