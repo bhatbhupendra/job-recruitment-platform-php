@@ -61,14 +61,16 @@
           </div>
           <div class="field password">
               <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter Password">
-              <i class="fas fa-eye"></i>
+              <div class="password_eye">
+                <input type="password" id="password" name="password" placeholder="Enter Password">
+                <i class="fas fa-eye"></i>
+              </div>
           </div> 
           <div class="field button_submit">
             <input type="submit" value="Log In">
           </div>
         </form>
-        <a href=\job-recruitment-platform-php\register.php\>SignUp</a>
+        <a href=\job-recruitment-platform-php\register.php>SignUp</a>
         <?php 
             if(isset($_POST["error"])){ 
               $errorData = $_POST['error'];

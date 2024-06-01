@@ -42,7 +42,6 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 .user_detail {
     display: flex;

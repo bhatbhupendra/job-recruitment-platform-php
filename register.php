@@ -71,7 +71,7 @@
   <body>
     <div class="form_wrapper">
       <section class="signup_form">
-        <header>Register Form</header>
+        <h2>Register Form</h2>
         <form action="<?php $_PHP_SELF ?>" method="post">
           <div class="name-details">
               <div class="field first_name">
@@ -89,13 +89,17 @@
           </div>
           <div class="field password">
               <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter new Password">
-              <i class="fas fa-eye"></i>
+              <div class="password_eye">
+                <input type="password" id="password" name="password" placeholder="Enter new Password">
+                <i class="fas fa-eye"></i>
+              </div>
           </div> 
           <div class="field confirm_password">
             <label for="confirm_password">Conform Password</label>
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Conform Password">
-            <i class="fas fa-eye"></i>
+            <div class="password_eye">
+              <input type="password" id="confirm_password" name="confirm_password" placeholder="Conform Password">
+              <i class="fas fa-eye"></i>
+            </div>
           </div>
           <div class="field button_submit">
             <input type="submit" value="Register">
