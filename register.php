@@ -70,7 +70,7 @@
   </head>
   <body>
     <div class="form_wrapper">
-      <section id="signup_form">
+      <section class="signup_form">
         <header>Register Form</header>
         <form action="<?php $_PHP_SELF ?>" method="post">
           <div class="name-details">
