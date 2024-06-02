@@ -3,9 +3,22 @@
 
     session_start();
     
-    // if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true){              
-    //     header("location: login.php");
-    // }
+    // getting job post
+    include "config.php";
+    $sql = "SELECT * FROM `jobpost`";
+    $post = mysqli_query($conn, $sql);
+
+    function checkAlreadyApplied($jobId){
+        include "config.php";
+        $userId = $_SESSION['id'];
+        $sql = "SELECT * FROM jobapplication WHERE job_id='{$jobId}' and user_id='{$userId}'";
+        $query = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($query)>0){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,27 +42,47 @@
                 <div class="job-header">
                     <h2>Job Section</h2>
                     <div class="job-buttons">
-                        <div class="job-post-button">
-                            <button class="job-button"><a href="">Post new Job</a></button>
-                        </div>
-                        <div class="job-applied">
-                            <button class="job-button"><a href="">My Post Job</a></button>
-                        </div>
-                        <div class="i-applied">
-                            <button class="job-button"><a href="">Applied Job</a></button>
-                        </div>
+                        <?php if(isset($_SESSION['role']) && $_SESSION['role']=="employer"){
+                            echo '
+                                <div class="job-post-button">
+                                    <button class="job-button"><a href="post-job.php">Post new Job</a></button>
+                                </div>
+                                <div class="job-applied">
+                                    <button class="job-button"><a href="profile.php">My Post Job</a></button>
+                                </div>
+                            ';
+                        } ?>
+                        
+                        <?php if(isset($_SESSION['role']) && $_SESSION['role']=="candidate"){
+                            echo '
+                                <div class="i-applied">
+                                    <button class="job-button"><a href="profile.php">Applied Job</a></button>
+                                </div>
+                            ';
+                        } ?>
+                        
                     </div>
+                    <h3>Recent Posted Jobs</h3>
                 </div>
                 <div class="job-list">
-                    <div class="job-card">
-                        <h3>We are hairgin</h3>
-                        <h4>Location : Sydney</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda maiores explicabo consectetur dolorem officia suscipit soluta cupidit.
-                        </p>
-                        <h5>2024/2/6</h5>
-                        <h5>Posted by: some some</h5>
-                        <button class="job-apply-button">Apply</button>
-                    </div>
+                    <?php if($post!=null){ ?>
+                        <?php foreach($post as $row){ ?>
+                            <div class="job-card">
+                                <h3><?php echo $row["title"];?></h3>
+                                <h4>Location : <?php echo $row["location"];?></h4>
+                                <p><?php echo $row["description"];?></p>
+                                <h5><?php echo $row["time"];?></h5> 
+                                <h5>Posted by: some some</h5>
+                                <?php if(isset($_SESSION['role']) && $_SESSION['role']=="candidate"){ ?>
+                                    <?php if(!checkAlreadyApplied($row["id"])){ ?>
+                                        <button class="job-apply-button"><a href="apply.php?jobID=<?php echo $row["id"];?>">Apply</a></button>
+                                    <?php }else{ ?>
+                                            <button class="job-apply-button">Applied</button>
+                                    <?php }?>
+                                <?php }?>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>

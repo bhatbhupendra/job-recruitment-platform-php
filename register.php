@@ -12,9 +12,9 @@
         }
     }
 
-    function createUser($first_name,$last_name,$email,$hashed_password){
+    function createUser($first_name,$last_name,$email,$role,$hashed_password){
         include "config.php";
-        $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('{$first_name}','{$last_name}', '{$email}', '{$hashed_password}')";
+        $sql = "INSERT INTO users (first_name, last_name, email,role, password) VALUES ('{$first_name}','{$last_name}', '{$email}','{$role}', '{$hashed_password}')";
         $query = mysqli_query($conn,$sql);
         if($query){
             return TRUE;
@@ -27,6 +27,7 @@
         $first_name = trim($_POST["firstName"]);                    //get first name
         $last_name = trim($_POST["lastName"]);                      //get last name
         $email = trim($_POST["email"]);                             //get email
+        $role = trim($_POST["role"]);                             //get email
         $password = trim($_POST['password']);                       //get password
         $confirm_password = trim($_POST['confirm_password']);       //get conform password
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);//hashing the entered password 
@@ -34,7 +35,7 @@
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){//varify email
                 if(!checkEmail($email)){  //checks if the entered email is already exist in batabase or not
                     if($password == $confirm_password){ //validate password
-                        if(createUser($first_name,$last_name,$email,$hashed_password)){////create user
+                        if(createUser($first_name,$last_name,$email,$role,$hashed_password)){////create user
                             header("location: login.php");// sucess
                         }else{    
                             $_POST['error']='Something went Wronh!! Contact Admin'; //error
@@ -86,6 +87,13 @@
           <div class="field email">
             <label for="email">Email Address</label>
             <input type="text" id="email" name="email" placeholder="Enter your email Address">
+          </div>
+          <div class="field role">
+            <label for="role">Role</label>
+            <select class="role" id="role" name="role">
+              <option value="candidate">candidate</option>
+              <option value="employer">employer</option>
+            </select>
           </div>
           <div class="field password">
               <label for="password">Password</label>
