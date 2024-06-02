@@ -37,6 +37,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
+    gap: 20px;
 }
 
 .job-list .job-card{

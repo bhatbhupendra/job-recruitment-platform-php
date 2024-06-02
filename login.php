@@ -21,8 +21,11 @@
                 $row = mysqli_fetch_assoc($query);
                 if(password_verify($password,$row['password'])){    //check if the entered password & password in database is same
                     //assigingig session variables
+                    $_SESSION['id'] = $row['id'];
+                    $_SESSION['first_name'] = $row['first_name'];
+                    $_SESSION['last_name'] = $row['last_name'];
                     $_SESSION['email'] = $row['email'];
-                    $_SESSION['user_id'] = $row['id'];
+                    $_SESSION['role'] = $row['role'];
                     $_SESSION['loggedin'] = true;
                     //Redirect user to welcome page
                     header("location: home.php");

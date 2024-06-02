@@ -15,6 +15,7 @@
   .signup_form {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     align-items: center;
     background: #fff;
     flex-direction: column;
@@ -36,21 +37,27 @@
   
   .field{
       display: flex;
-      flex-direction: column;
-      padding-bottom: 15px;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 25px;
+      padding-bottom: 10px;
   }
   
   .field input{
-      font-size: 20px;
+      font-size: 13px;
       padding: 5px;
   }
-  
+
+  .field .role {
+    font-size: 13px;
+    padding: 5px;
+    width: 52%;
+  }  
   
   .field label {
     min-width: 120px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-  
   }
   
   .password_eye {
@@ -58,8 +65,13 @@
   }
   .password_eye i {
     position: absolute;
-    right: 20px;
-    top: 12px;
+    right: 9px;
+    top: 8px;
+  }
+
+  .button_submit{
+    display: flex;
+    justify-content: center;
   }
   
   .button_submit input{
