@@ -25,9 +25,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="library/chart.min.js"></script>
-    
+    <script src="https://kit.fontawesome.com/118a820504.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="dashboard-container">

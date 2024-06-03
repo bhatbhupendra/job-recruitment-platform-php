@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="assets/css/post-job.css">
     <link rel="stylesheet" href="assets/css/nav.css">
     <script src="https://kit.fontawesome.com/118a820504.js" crossorigin="anonymous"></script>
-    <script src="library/chart.min.js"></script>
     
 </head>
 <body>
