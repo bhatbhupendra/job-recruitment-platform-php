@@ -43,12 +43,20 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
+@media only screen and (max-width: 870px) {
+    .nav  {
+        padding: 8px 30px;
+    }
+}
+
 .user_detail {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 8px 30px;
 }
+
 
 .fa-regular {
     font-size: 18px;

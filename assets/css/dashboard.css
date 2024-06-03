@@ -2,6 +2,12 @@
     padding: 5px 180px;
 }
 
+@media only screen and (max-width: 1000px) {
+    .dashboard-body-area {
+        padding: 5px 20px;
+    }   
+}
+
 .dashboard-body-area .container{
     background-color: white;
     padding: 10px 20px;
@@ -36,6 +42,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-items: center;
     margin-top: 20px;
     gap: 20px;
 }
@@ -44,10 +51,15 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 30%;
+    width: 250px;
     border-radius: 5px;
     border: 1px rgb(184, 184, 184) solid;
     padding: 20px 25px;
+}
+@media only screen and (max-width: 634px) {
+    .job-list .job-card {
+        width: 100%;
+    }
 }
 
 .job-list .job-card .job-apply-button{
