@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
+    body {
+      font-family: "Manrope";
+      background-color: #fafbff;
+    }
   
   .form_wrapper {
     display: flex;
@@ -23,6 +29,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 50px;
+    background-color: rgb(245, 245, 245);
   }
   
   .signup_form h1{

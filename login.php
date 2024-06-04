@@ -56,7 +56,7 @@
   <body>
     <div class="form_wrapper">
       <section class="signup_form">
-        <h1>LogIn Form</h1>
+        <h1>Log in Form</h1>
         <form action="<?php $_PHP_SELF?>" method="post">
           <div class="field email">
             <label for="email">Email Address</label>
@@ -73,7 +73,9 @@
             <input type="submit" value="Log In">
           </div>
         </form>
-        <a href=\job-recruitment-platform-php\register.php>SignUp</a>
+        <div class="link">Don't have account. Create one!! <a href=\job-recruitment-platform-php\register.php>SignUp</a></div>
+
+        
         <?php 
             if(isset($_POST["error"])){ 
               $errorData = $_POST['error'];
